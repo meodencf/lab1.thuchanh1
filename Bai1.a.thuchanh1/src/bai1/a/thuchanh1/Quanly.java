@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Quanly {
+
     private ArrayList<Vehicle> listVehicle;
 
     public Quanly() {
@@ -32,11 +33,12 @@ public class Quanly {
 
     public void xuatBangKe() {
 
-        System.out.printf("%-15s %-20s %-15s %-10s %-10s\n", "tên chủ xe", "loại xe", "Dung tích", "Trị giá", "Tiền thuế");
+        System.out.println("ten chu xe      " + "loai xe                 " + "Dung tich      " + "Tri gia   " + "Tien thue  ");
         System.out.println("=====================================================================================");
         for (Vehicle vehicle : listVehicle) {
-            System.out.printf("%-15s %-20s %-15d %-10.2f %-10.2f\n", vehicle.getTenchuxe(), vehicle.getLoaixe(),
-                    vehicle.getDungtich(), vehicle.getTrigiaxe(), vehicle.tinhtienthue());
+            System.out.println(vehicle.getTenchuxe() + "      " + vehicle.getLoaixe() + "                 " + vehicle.getDungtich()
+                    + "      " + String.format("%.2f", vehicle.getTrigiaxe()) + "   " + String.format("%.2f", vehicle.tinhtienthue()));
+
         }
     }
 }
